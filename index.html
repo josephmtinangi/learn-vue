@@ -7,8 +7,9 @@
 <body>
 
   <div id="app">
-    <input type="text" id="input" v-model="message">
-    <p>The value of the input is: {{ message }}</p>
+    <ul>
+      <li v-for="language in languages">{{ language }}</li>
+    </ul>
   </div>
   
   <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
@@ -16,7 +17,7 @@
     new Vue({
       el: '#app',
       data: {
-        message: 'Hello World!'
+        languages: ['HTML', 'CSS', 'JavaScript', 'PHP']
       }
     });
   </script>
