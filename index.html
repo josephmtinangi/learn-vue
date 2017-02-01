@@ -10,6 +10,10 @@
     <ul>
       <li v-for="language in languages" v-text="language"></li>
     </ul>
+
+    <input type="text" v-model="newLang">
+    <button v-on:click="addLang">Add</button>
+  
   </div>
   
   <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
@@ -17,7 +21,15 @@
     new Vue({
       el: '#app',
       data: {
+        newLang: '',
         languages: ['HTML', 'CSS', 'JavaScript', 'PHP']
+      },
+      methods: {
+        addLang: function () {
+          this.languages.push(this.newLang);
+
+          this.newLang = '';
+        }
       }
     });
   </script>
