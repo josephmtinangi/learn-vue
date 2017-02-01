@@ -6,19 +6,16 @@
 </head>
 <body>
 
-  <div id="app">
-    <button v-bind:title="title">Hover over me</button>  
+  <div id="root">
+    
+    <task>Go to the store</task>
+    <task>Go to the bank</task>
+    <task>Go to the vacation</task>
+
   </div>
   
   <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        title: 'I am set through JavaScript'
-      }
-    });
-  </script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
